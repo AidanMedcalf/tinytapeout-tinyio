@@ -6,33 +6,33 @@
 #
 # This will be automatically collected and used to make a datasheet for the chip.
 project: 
-  author:       ""      # Your name
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     0       # Clock frequency in Hz (if required)
-  language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  wokwi_id:     0       # the wokwi ID
-  picture:      ""      # relative path to a picture in your repository
-  inputs:               # a description of what the inputs do
+  author:       "Aidan Medcalf"                                        # Your name
+  title:        "TinyIO"                                               # Project title
+  description:  "Tiny I/O expander with SPI interface"                 # Short description of what your project does
+  how_it_works: "TinyIO takes 7 bits in as digital outputs, and sends 3 bits out from its digital inputs."      # Longer description of how the project works
+  how_to_test:  "7-bit SPI transaction. Supply nCE, SIN and SCK."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "SPI driver"                                           # Describe any external hardware needed
+  doc_link:     "https://github.com/AidanMedcalf/tinytapeout-tinyio/blob/main/README.md"    # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     0                                                      # Clock frequency in Hz (if required)
+  language:     "Verilog"                                              # other examples include Verilog, Amaranth, VHDL, etc
+  wokwi_id:     341432284947153491                                     # the wokwi ID
+  picture:      ""                                                     # relative path to a picture in your repository
+  inputs:                                                              # a description of what the inputs do
     - clock
     - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - serial clock
+    - chip enable
+    - serial in
+    - in0
+    - in1
+    - in2
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
+    - out0
+    - out1
+    - out2
+    - out3
+    - out4
+    - out5
+    - out6
+    - serial out
 
